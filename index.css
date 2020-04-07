@@ -1,0 +1,73 @@
+.header {
+    background-color: #43b15b !important;
+}
+
+.titulo-header {
+    color: white !important;
+}
+
+.card-apartamentos {
+    margin-top: 30px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 50px;
+}
+
+.fa-dollar-sign {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #43b15b;
+    color: white;
+}
+
+.conteudo-card-espaco {
+    margin-left: 25px;
+}
+
+.fa-plus {
+    background-color: #43b15b;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.btn-verMais {
+    text-decoration: none !important;
+    color: gray;
+}
+
+.btn-verMais:hover {
+    color: black;
+}
+
+
+/*css filtros*/
+
+.classe-fitros {
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 80px;
+}
+
+.classe-fitros2 {
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 80px;
+}
+
+
+/*btn filtros*/
+
+.fa-search {
+    font-size: 40px;
+    color: gray;
+    margin-top: 20px;
+}
+
+.fa-search:hover {
+    color: black;
+}
