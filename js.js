@@ -6,14 +6,28 @@ function carregaDados(){
         xhr.open("get", 'http://www.mocky.io/v2/5e8bbc982f00006d0088c4ed');
     
         xhr.onload = function(){
-                let  json = JSON.parse(xhr.response);
-                console.log(json)
-                colocaNaTela(json)
+            let json = JSON.parse(xhr.response);
+            json.sort(function (a, b) { //ordena price decrescente.
+                if (a.price < b.price) {
+                    return 1; //mais 1
+                }
+                if (a.price > b.price) {
+                    return -1; //menos 1
+                }
+
+                return 0;
+            });
+            json = json.filter(function (value) { //retiva valores indesejáveis.
+                return value.price !== 0 && value.publish !== false;
+            });
+            colocaNaTela(json);
             } 
-            xhr.send(null)
+    xhr.send(null);
         }
 function colocaNaTela(obj) {
+    console.log(obj);
     for (let i = 0; i < 3; i++) { //for (let i = 0; i < obj.length; i++) {
+        
         let indice = i + 1;
         let id = document.getElementById(indice.toString());
         let end = obj[i].address.formattedAddress;
@@ -23,12 +37,12 @@ function colocaNaTela(obj) {
         let price = obj[i].price / 100;
         document.querySelectorAll('.card-title')[i].textContent = end;
         for (let j = 0; j < 3; j++) { //obj[i].images.length
-            document.querySelectorAll('.d-block.w-100')[i].src = imgs[j];
+            id.querySelectorAll('.d-block.w-100')[i].src = imgs[j];
         }
         document.querySelectorAll('.area')[i].textContent = area;
         document.querySelectorAll('.bed')[i].textContent = bed;
         document.querySelectorAll('.price')[i].textContent = price;
-
+        // document.querySelectorAll('.modal-body')[i].textContent = area;
 
         // let end = document.querySelectorAll('.card-title');
         // end[i].innerText = obj[i].address.formattedAddress;
