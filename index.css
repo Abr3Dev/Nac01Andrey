@@ -71,3 +71,7 @@
 .fa-search:hover {
     color: black;
 }
+.all{
+    display: flex;
+    justify-content: space-around;
+}
