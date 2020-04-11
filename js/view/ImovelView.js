@@ -1,14 +1,12 @@
-function template(lista){
-    let cards = document.querySelector('.card-deck');
-    
-        return  `
+function template(lista) {
+    return `
         <p>${lista.endereco}</p>
         <p>${lista.imagens[0]}</p>
-        <p>${lista.preco}</p>
-        <p>${lista.banheiros}</p>
-        <p>${lista.quartos}</p>
-        <p>${lista.area}</p>
-        <p>${lista.estacionamentos}</p>
+        <p>R$ ${lista.preco},00.</p>
+        <p>nº Banheiro: ${lista.banheiros}</p>
+        <p>nº Quartos: ${lista.quartos}</p>
+        <p>Área útil: ${lista.area}</p>
+        <p>nº Vagas: ${lista.estacionamentos}</p>
         <hr/>
     `
     ;
