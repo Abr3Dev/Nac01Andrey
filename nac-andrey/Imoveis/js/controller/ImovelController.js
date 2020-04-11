@@ -19,7 +19,7 @@ class ImovelController{
            
             jsson =  org._organizar(jsson);
         
-           console.log(json.length)
+           
             jsson.forEach(function(imoveis) {
 				let i = new Imovel();
              i.id = imoveis.id;
