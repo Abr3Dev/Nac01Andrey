@@ -1,25 +1,50 @@
 window.onload = carregaDados();
 let div = document.querySelector('.valores');
 
-function carregaDados(){
+function carregaDados() {
     console.log('chamou o método')
     let xhr = new XMLHttpRequest();
     xhr.open('get', 'http://www.mocky.io/v2/5e8bbc982f00006d0088c4ed');
     xhr.send()
-    xhr.addEventListener('load', function(){
-        if(xhr.status == 200){
+    xhr.addEventListener('load', function() {
+        if (xhr.status == 200) {
             let json = JSON.parse(xhr.responseText);
-            json.sort(function (a, b) { //ordena price decrescente.
+            //ordena preco decrescente.
+            json.sort(function(a, b) {
                 if (a.price < b.price) {
                     return 1; //mais 1
                 }
                 if (a.price > b.price) {
                     return -1; //menos 1
                 }
-    
+
                 return 0;
             });
-            json = json.filter(function (value) { //retira valores indesejáveis.
+            //ordena preco  crescente
+            json.sort(function crescente(a, b) {
+                if (a.price < b.price) {
+                    return 1; //mais 1
+                }
+                if (a.price > b.price) {
+                    return -1; //menos 1
+                }
+
+                return 0;
+            });
+
+            //pegando valor para fazer os fluxos
+            var valPreco = document.getElementById("inputPreco");
+            var valQuarto = document.getElementById("inputQuarto");
+            var valBanheiros = document.getElementById("inputBanheiros");
+            var valVagas = document.getElementById("inputVagas");
+            console.log('==', valPreco.value, '=', valQuarto.value, '=', valBanheiros.value, '=', valVagas.value);
+
+            if (valPreco.value = 'menor') {
+                //chama funcao crescente
+            }
+
+            //=================
+            json = json.filter(function(value) { //retira valores indesejáveis.
                 return value.price !== 0 && value.publish !== false;
             });
             console.log(json)
