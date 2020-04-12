@@ -29,15 +29,15 @@ class ImovelView extends View{
              </div>
              <p class="card-text"><i class="fas fa-dollar-sign"></i> <span class="price"></span>${item.imoveis.preco}</p>
              <!-- Button trigger modal -->
-             <a data-toggle="modal" data-target="#exampleModal" class="btn-detalhes"> <i class="fas fa-plus"></i>Detalhes</a>
+             <a data-toggle="modal" data-target="#exampleModal${item.imoveis.id}" class="btn-detalhes"> <i class="fas fa-plus"></i>Detalhes</a>
+             </div>
          </div>
-     </div>
-         `
-     }
-
-     _template2(item){
-        return  `
-        <div class="modal fade ${item.imoveis.id}" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+             `
+        }
+    
+        _template2(item) {
+            return `
+            <div class="modal fade" id="exampleModal${item.imoveis.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
