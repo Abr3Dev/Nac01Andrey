@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,29 +17,22 @@
     </ul>
 
     <div class="row classe-fitros2">
-        <div class="form-group classe-fitros">
-            <label for="Preco">Preço</label>
-            <select id="inputPreco" class="form-control">
-                    <option>maior</option>
-                    <option>menor</option>       
-                </select>
-        </div>
 
         <div class="form-group classe-fitros">
             <label for="Quarto">Quartos</label>
             <select id="inputQuarto" class="form-control">
                     <option>1</option>
                     <option>2</option>      
-                    <option>3+</option>      
+                    <option>3</option>      
                 </select>
         </div>
 
         <div class="form-group classe-fitros">
             <label for="Banheiros">Banheiros</label>
-            <select id="inputBanheiros" class="form-control">
+            <select id="inputBanheiro" class="form-control">
                     <option>1</option>
                     <option>2</option>      
-                    <option>3+</option>      
+                    <option>3</option>      
                 </select>
         </div>
 
@@ -49,25 +41,43 @@
             <select id="inputVagas" class="form-control">
                     <option>1</option>
                     <option>2</option>      
-                    <option>3+</option>      
+                    <option>3</option>      
                 </select>
         </div>
         <!--botao dos filtros-->
         <div class="form-group classe-fitros">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search" onclick="new FiltroController"></i>
         </div>
     </div>
 
-    <div class="valores">
-    </div>
+    
+        <div class="card-apartamentos">
+          <div class="card-deck">
+              
+          </div>
+        </div>
+        <div class="modais">
+            
+        </div>
 
-    <script src="./js/model/Imovel.js"></script>
-    <script src="./js/view/ImovelView.js"></script>
-    <script src="./js/controller/ImovelController.js"></script>
 
+
+    <script src="./nac-andrey/Imoveis/js/model/Imovel.js"></script>
+    <script src="./nac-andrey/Imoveis/js/model/ListaImoveis.js"></script>
+    <script src="./nac-andrey/Imoveis/js/helper/organizarJson.js"></script>
+    <script src="./nac-andrey/Imoveis/js/helper/AplicarFiltro.js"></script>
+    <script src="./nac-andrey/Imoveis/js/helper/InputValores.js"></script> 
+    <script src="./nac-andrey/Imoveis/js/view/View.js"></script>
+    <script src="./nac-andrey/Imoveis/js/view/ImovelView.js"></script>
+    <script src="./nac-andrey/Imoveis/js/controller/ImovelController.js"></script>
+    <script src="./nac-andrey/Imoveis/js/controller/FiltroController.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
+    
+    <script>
+        window.onload = new ImovelController();
+    </script>
+    </body>
 
 </html>

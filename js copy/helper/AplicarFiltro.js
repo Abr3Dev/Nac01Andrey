@@ -7,7 +7,7 @@ class AplicarFiltro{
         let banheiros = document.querySelectorAll('.banheiros');
         let vagas = document.querySelectorAll('.vagas');
         let quartos = document.querySelectorAll('.quartos');
-       
+        
         for (let i = 0; i < banheiros.length; i++) {
 
            if(banheiros[i].textContent != valor1){
@@ -26,16 +26,11 @@ class AplicarFiltro{
     _removerElemento(elemento){
         let filho = elemento.parentNode;
         let pai = filho.parentNode;
-        pai = pai.parentNode;
-        let valor = pai.parentNode
-       
-       console.log(valor.className)
+        pai.classList.add('remove');
     }
     _adcionarElemento(elemento){
         let filho = elemento.parentNode;
         let pai = filho.parentNode;
-       
-
         pai.classList.remove('remove');
     }
     

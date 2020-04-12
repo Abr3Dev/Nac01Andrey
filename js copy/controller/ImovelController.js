@@ -13,8 +13,8 @@ class ImovelController{
 
             let jsson = JSON.parse(xhr.responseText);
             let lista = new ListaImoveis();
-            let view = new ImovelView(document.querySelector('.card-deck'))
-            let view2 = new ImovelView(document.querySelector('.modais'))
+            let view = new ImovelView(document.querySelector('.cards'))
+            let view2 = new ImovelView(document.querySelector('.detalhes'))
             let org = new Organizar();
            
             jsson =  org._organizar(jsson);
