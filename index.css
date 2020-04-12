@@ -75,3 +75,23 @@
     display: flex;
     justify-content: space-around;
 }
+.cards-aps{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    justify-items:center;
+    width:80%;
+    margin-left:10%;
+}
+.conteudo{
+    display:flex;
+    flex-wrap:wrap;
+    width:15%;
+    height:450px;
+    justify-content:space-around;
+    flex-flow:column;
+    border-radius:5px;
+    margin-bottom:5%;
+    box-shadow: 3px 2px 20px #80787861;
+	border-radius: 5px;
+}
