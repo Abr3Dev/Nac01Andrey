@@ -9,7 +9,6 @@ class InputValores{
         quarto = 'Quartos : ' + quarto.value
         vagas = 'Vagas : ' + vagas.value
         banheiro = 'Banheiros : ' + banheiro.value
-       
         return [banheiro, quarto, vagas]
     }
 }

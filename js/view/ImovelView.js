@@ -7,16 +7,10 @@ class ImovelView extends View{
          
          return  `
          <div class="conteudo" id="${item.imoveis.id}">
-         <div id="carouselExampleControls${item.imoveis.id}" class="carousel slide" data-ride="carousel">
+         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
              <div class="carousel-inner">
                  <div class="carousel-item active">
                      <img src="${item.imoveis.imagens[0]}" class="d-block w-100" alt="...">
-                 </div>
-                 <div class="carousel-item">
-                     <img src="${item.imoveis.imagens[1]}" class="d-block w-100" alt="...">
-                 </div>
-                 <div class="carousel-item">
-                     <img src="${item.imoveis.imagens[2]}" class="d-block w-100" alt="...">
                  </div>
              </div>
             
@@ -46,45 +40,39 @@ class ImovelView extends View{
             <span aria-hidden="true">&times;</span>
           </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" >
 
                         <div id="carouselExampleControlsModal${item.imoveis.id}" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
+                            
                                 <div class="carousel-item active">
                                     <img src="${item.imoveis.imagens[0]}" class="d-block w-100" alt="...">
                                 </div>
+                                ${item.imoveis.imagens.map(img =>`
                                 <div class="carousel-item">
-                                    <img src="${item.imoveis.imagens[1]}" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="${item.imoveis.imagens[2]}" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="${item.imoveis.imagens[3]}" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="${item.imoveis.imagens[4]}" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="${item.imoveis.imagens[5]}" class="d-block w-100" alt="...">
-                                </div>
+                                <img src="${img}" class="d-block w-100" alt="...">
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControlsModal1" role="button" data-slide="prev">
+                                `).join('')}
+                               
+                                
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControlsModal${item.imoveis.id}" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselExampleControlsModal1" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#carouselExampleControlsModal${item.imoveis.id}" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-
+                        <div id="${item.imoveis.id}">
                         <p class="endereco">Endereço : ${item.imoveis.endereco}</p>
                         <p class="quartos">Quartos : ${item.imoveis.quartos}</p>
                         <p class="banheiros">Banheiros : ${item.imoveis.banheiros}</p>
                         <p class="vagas">Vagas : ${item.imoveis.estacionamento}</p>
                         <p class="area">Área Utilizável : ${item.imoveis.area}m²</p>
                         <p class="card-text"><i class="fas fa-dollar-sign"></i> ${item.imoveis.preco}</p>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

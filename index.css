@@ -1,5 +1,7 @@
 .header {
     background-color: #43b15b !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .titulo-header {
@@ -7,10 +9,7 @@
 }
 
 .card-apartamentos {
-    margin-top: 30px;
-    margin-left: 90px;
-    margin-right: 90px;
-    margin-bottom: 50px;
+   margin-top : 5%
 }
 
 .fa-dollar-sign {
@@ -48,23 +47,23 @@
 /*css filtros*/
 
 .classe-fitros {
-    margin-top: 40px;
-    margin-left: 100px;
-    margin-bottom: 80px;
+   margin-top:5%;
+   width: 15%;
+   margin-left : 10%;
+    
 }
-
-.classe-fitros2 {
-    margin-top: 40px;
-    margin-left: 100px;
-    margin-bottom: 80px;
+.classe-fitros2{
+    display: flex;
+    justify-items:left;
+    width:100%;
+    margin-left:10%;
 }
-
 
 /*btn filtros*/
 
 .fa-search {
     font-size: 40px;
-    color: gray;
+    color: rgb(39, 170, 68);
     margin-top: 20px;
 }
 
@@ -88,10 +87,26 @@
     flex-wrap:wrap;
     width:15%;
     height:450px;
-    justify-content:space-around;
+    justify-content:space-between;
     flex-flow:column;
     border-radius:5px;
     margin-bottom:5%;
     box-shadow: 3px 2px 20px #80787861;
 	border-radius: 5px;
+}
+.remove{
+    display:none;
+}
+.btn-reset{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top : 5%
+}
+.reset{
+    background: rgb(5, 138, 244);
+    border-style: none;
+    padding : 10px;
+    border-radius: 5px;
+    color:white;
 }
