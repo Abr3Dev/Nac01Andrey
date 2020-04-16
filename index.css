@@ -18,6 +18,7 @@
     padding: 10px;
     background-color: #43b15b;
     color: white;
+
 }
 
 .conteudo-card-espaco {
@@ -109,4 +110,7 @@
     padding : 10px;
     border-radius: 5px;
     color:white;
+}
+.remove{
+    display : none;
 }

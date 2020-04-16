@@ -1,13 +1,14 @@
 class Imovel {
     constructor(id, endereco, imagens, preco, banheiros, quartos, estacionamento, area, publicavel){
-        this.id = id;
-        this.endereco = endereco;
-        this.imagens = imagens;
-        this.preco = preco;
-        this.banheiros = banheiros;
-        this.quartos = quartos;
-        this.estacionamento = estacionamento;
-        this.area = area;
-        this.publicavel = publicavel;
+        this._id = id;
+        this._endereco = endereco;
+        this._imagens = imagens;
+        this._preco = preco;
+        this._banheiros = banheiros;
+        this._quartos = quartos;
+        this._estacionamento = estacionamento;
+        this._area = area;
+        this._publicavel = publicavel;
     }
+
 }
