@@ -1,16 +1,15 @@
 class ImovelController{
     constructor(){
+        this._view = new ImovelView(document.querySelector('.cards-aps'));
+        this._infosAdcionais = new ImovelView(document.querySelector('.modais'));
+        this.count = 1;
         this._data = new Data();
-        
         this._organizarJSON = new Organizar();
         this._jsonFormatado = this._organizarJSON._organizar(this._data.arr)
         this._lista = new ListaImoveis();
-        this._view = new ImovelView(document.querySelector('.cards-aps'));
-        this._infosAdcionais = new ImovelView(document.querySelector('.modais'));
         this._paginacao = new Paginacao();
         this._pag1 = this._paginacao.pagina1(this._jsonFormatado);
         this._pag2 = this._paginacao.pagina2(this._jsonFormatado);
-        this.count = 1;
         this._pag3 = this._paginacao.pagina3(this._jsonFormatado);
         this._instanciarObj(this._pag1);
     }
@@ -48,55 +47,4 @@ class ImovelController{
         }
         
     }
-   
-
-
-
-
-
-
-
-
-
-
-    // _retornaValores(){
-        
-    //     let request = new XMLHttpRequest;
-    // request.open('GET', 'http://www.mocky.io/v2/5e8bbc982f00006d0088c4ed')
-    // request.setRequestHeader('Access-Control-Allow-Origin', '*');
-    // request.setRequestHeader('Access-Control-Allow-Methods', '*');
-    // request.setRequestHeader('Access-Control-Allow-Headers', ' api-key, Content-Type');
-    // request.setRequestHeader('Access-Control-Allow-Credentials', true);
-    // request.send(null)
-    //     request.onload = function(){
-
-    //         let jsson = JSON.parse(request.responseText);
-    //         let lista = new ListaImoveis();
-    //         let view = new ImovelView(document.querySelector('.cards-aps'))
-    //         let view2 = new ImovelView(document.querySelector('.modais'))
-    //         let org = new Organizar();
-    //        let contador = 0;
-    //         jsson =  org._organizar(jsson);
-           
-    //         jsson.forEach(function(imoveis) {
-	// 			let i = new Imovel();
-    //         i.id = imoveis.id;
-    //             i.estacionamento = imoveis.parkingSpaces;
-    //                 i.preco = imoveis.price;
-    //                     i.publicavel = imoveis.publish;
-    //                         i.area = imoveis.usableArea;
-    //                     i.banheiros = imoveis.bathrooms;
-    //                 i.quartos = imoveis.bedrooms;
-    //             i.imagens = imoveis.images;
-    //         i.endereco = imoveis.address.formattedAddress;
-    //         if(contador <= 7){
-
-    //         }
-    //          lista._adiciona(i);
-    //          view.update(lista);
-    //          view2.updateInfos(lista, i.imagens);
-    //          contador++;
-	// 		})
-    //     };
-    // }
 }

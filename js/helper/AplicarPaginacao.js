@@ -22,7 +22,7 @@ class Paginacao{
     }
     pagina3(json){
         
-        for (let i = 16; i<25; i++) {
+        for (let i = 15; i<25; i++) {
             
             this._pag3.push (json[i]);
         }
