@@ -11,7 +11,13 @@ JOÃO PEDRO ALBUQUERQUE DOS SANTOS RM: 82680<BR/>
 RAPHAEL MOLINA BEDRAN RM: 82352<BR/>
 RAPHAEL SANTANTONIO DE CAMARGO RM: 83088<BR/>
 
-### Rodar projeto
+### Acesso pela URL
+
+```
+https://abr3dev.github.io/Nac01Andrey/
+```
+
+### Abrir  projeto
 
 ```
 git clone https://github.com/Abr3Dev/Nac01Andrey.git
